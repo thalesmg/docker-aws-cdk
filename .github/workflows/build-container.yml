@@ -35,7 +35,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3.6.2
         with:
-          images: ${{ env.REGISTRY }}/emqx/aws-cdk
+          images: ${{ env.REGISTRY }}/${{ github.repository }}/aws-cdk
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.7.0
